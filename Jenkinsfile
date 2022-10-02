@@ -7,7 +7,7 @@ pipeline {
                 sh '''#!/bin/bash
                 cd react-web
                 npm run build
-                systemctl restart nginx
+                sudo systemctl restart nginx
                 '''
             }
         }
