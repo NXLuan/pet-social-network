@@ -6,8 +6,8 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                 cd react-web
-                sudo npm run build
-                sudo systemctl restart nginx
+                npm run build
+                systemctl restart nginx
                 '''
             }
         }
