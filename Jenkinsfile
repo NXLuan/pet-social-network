@@ -12,7 +12,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/NXLuan/pet-social-network.git'
             }
         }
-        stage('Deploy') {
+        stage('Deploy') { 
             when {
                 changelog ".*upserver.*"
             }
