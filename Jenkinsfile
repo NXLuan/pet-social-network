@@ -1,12 +1,6 @@
 pipeline {
     agent any
-
     stages {
-/*         stage('checkout'){
-            steps {
-                git branch: 'main', url: 'https://github.com/NXLuan/pet-social-network.git'
-            }
-        } */
         stage('Deploy') { 
             when {
                 changelog "upserver.*"
