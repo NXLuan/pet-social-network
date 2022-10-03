@@ -3,6 +3,9 @@ pipeline {
 
     stages {
         stage('Deploy') {
+            when {
+                changelog "^upserver.*"
+            }
             steps {
                 sh '''#!/bin/bash
                 cd react-web
