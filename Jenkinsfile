@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options {
-        skipDefaultCheckout true
+        skipDefaultCheckout(true)
     }
     stages {
         stage('checkout'){
@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Deploy') { 
             when {
-                changelog ".*upserver.*"
+                changelog "upserver.*"
             }
             steps {
                 sh '''#!/bin/bash
