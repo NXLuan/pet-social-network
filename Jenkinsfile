@@ -5,10 +5,7 @@ pipeline {
     }
     stages {
         stage('checkout'){
-            when {
-                changelog ".*upserver.*"
-            }
-            steps{
+            steps {
                 git branch: 'main', url: 'https://github.com/NXLuan/pet-social-network.git'
             }
         }
