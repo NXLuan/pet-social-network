@@ -12,15 +12,15 @@ pipeline {
                 '''
             }
         }
-		stage('build BackEnd') { 
+	stage('build BackEnd') { 
             when {
                 changelog "upserver.*"
             }
             steps {
                 sh '''#!/bin/bash
                 cd Pet.Social.Network
-				/home/ubuntu/dotnet/dotnet build --no-restore
-				/home/ubuntu/dotnet/dotnet publish src/Host/Host.csproj -c Realease -o backend
+		sudo /home/ubuntu/dotnet/dotnet build --no-restore
+		sudo /home/ubuntu/dotnet/dotnet publish src/Host/Host.csproj -c Realease -o backend
                 '''
             }
         }
