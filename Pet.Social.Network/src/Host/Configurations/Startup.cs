@@ -1,3 +1,6 @@
+using Pet.Social.Network.Infrastructure.Common;
+using Serilog;
+
 namespace Pet.Social.Network.Host.Configurations;
 
 internal static class Startup
@@ -8,7 +11,9 @@ internal static class Startup
         {
             const string configurationsDirectory = "Configurations";
             var env = context.HostingEnvironment;
-            config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            try
+            {
+                config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"{configurationsDirectory}/logger.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"{configurationsDirectory}/logger.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
@@ -33,6 +38,13 @@ internal static class Startup
                 .AddJsonFile($"{configurationsDirectory}/securityheaders.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"{configurationsDirectory}/securityheaders.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
                 .AddEnvironmentVariables();
+            }
+            catch (Exception ex)
+            {
+                StaticLogger.EnsureInitialized();
+                Log.Fatal(ex, "Unhandled exception");
+            }
+            
         });
         return host;
     }
