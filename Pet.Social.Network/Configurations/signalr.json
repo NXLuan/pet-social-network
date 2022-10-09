@@ -1,9 +1,0 @@
-{
-  "SignalRSettings": {
-    "UseBackplane": false,
-    "Backplane": {
-      "Provider": "redis",
-      "StringConnection": "168.138.161.20:6379"
-    }
-  }
-}

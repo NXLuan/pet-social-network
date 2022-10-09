@@ -20,7 +20,7 @@ pipeline {
                 sh '''#!/bin/bash
                 cd Pet.Social.Network
 		sudo /home/ubuntu/dotnet/dotnet build --no-restore
-		sudo /home/ubuntu/dotnet/dotnet publish src/Host/Host.csproj -c Realease -o backend
+		sudo /home/ubuntu/dotnet/dotnet publish src/Host/Host.csproj -c Realease -o /src/Host/backend
                 '''
             }
         }
