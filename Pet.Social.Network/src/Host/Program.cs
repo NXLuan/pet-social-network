@@ -14,6 +14,12 @@ try
 {
     var builder = WebApplication.CreateBuilder(args);
 
+    builder.WebHost.ConfigureKestrel(options =>
+    {
+        options.ListenAnyIP(5000); // to listen for incoming http connection on port 5000
+        options.ListenAnyIP(5001, configure => configure.UseHttps()); // to listen for incoming https connection on port 5001
+    });
+
     builder.Host.AddConfigurations();
     builder.Host.UseSerilog((_, config) =>
     {
