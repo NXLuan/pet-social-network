@@ -18,8 +18,8 @@ pipeline {
             }
             steps {
                 sh '''#!/bin/bash
-                cd react-web
-                npm run build
+                cd Pet.Social.Network
+                /home/ubuntu/dotnet/dotnet build
                 '''
             }
         }
