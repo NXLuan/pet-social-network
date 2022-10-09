@@ -11,5 +11,5 @@ internal static class Startup
         {
             FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Files")),
             RequestPath = new PathString("/Files")
-        }); 
+        });
 }
