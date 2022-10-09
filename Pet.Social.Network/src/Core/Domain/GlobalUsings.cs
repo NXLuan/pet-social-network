@@ -1,0 +1,1 @@
+﻿global using Pet.Social.Network.Domain.Common.Contracts;

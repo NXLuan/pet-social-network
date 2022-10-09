@@ -1,0 +1,7 @@
+{
+  "CacheSettings": {
+    "UseDistributedCache": false,
+    "PreferRedis": false,
+    "RedisURL": "168.138.161.20:6379"
+  }
+}

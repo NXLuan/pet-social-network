@@ -1,0 +1,6 @@
+{
+  "DatabaseSettings": {
+    "ConnectionString": "Host=168.138.161.20;Port=5432;Database=pet.social.network;Username=postgres;Password=123456az;Include Error Detail=true",
+    "DBProvider": "postgresql"
+  }
+}

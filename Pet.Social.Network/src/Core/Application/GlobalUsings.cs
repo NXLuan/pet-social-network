@@ -1,0 +1,17 @@
+global using Ardalis.Specification;
+global using FluentValidation;
+global using Pet.Social.Network.Application.Common.Events;
+global using Pet.Social.Network.Application.Common.Exceptions;
+global using Pet.Social.Network.Application.Common.FileStorage;
+global using Pet.Social.Network.Application.Common.Interfaces;
+global using Pet.Social.Network.Application.Common.Models;
+global using Pet.Social.Network.Application.Common.Persistence;
+global using Pet.Social.Network.Application.Common.Specification;
+global using Pet.Social.Network.Application.Common.Validation;
+global using Pet.Social.Network.Domain.Catalog;
+global using Pet.Social.Network.Domain.Common;
+global using Pet.Social.Network.Domain.Common.Contracts;
+global using Pet.Social.Network.Shared.Notifications;
+global using MediatR;
+global using Microsoft.Extensions.Localization;
+global using Microsoft.Extensions.Logging;
