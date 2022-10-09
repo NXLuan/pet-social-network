@@ -1,7 +1,18 @@
 pipeline {
     agent any
     stages {
-        stage('Deploy') { 
+        stage('build FrontEnd') { 
+            when {
+                changelog "upclient.*"
+            }
+            steps {
+                sh '''#!/bin/bash
+                cd react-web
+                npm run build
+                '''
+            }
+        }
+		stage('build BackEnd') { 
             when {
                 changelog "upserver.*"
             }
